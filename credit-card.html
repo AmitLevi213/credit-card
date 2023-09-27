@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./credit-card.css" />
+    <title>Credit-Card</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="head-txt">Let’s Make Payment</h1>
+      <p id="p-head">
+        To start your subscription, input your card details to make payment. You
+        will be redirected to your banks authorization page .
+      </p>
+      <form class="form-container" action="">
+        <div class="form-group">
+          <label id="cardholder" for="cardholderName">Cardholder's ame</label
+          ><br />
+          <input
+            class="design"
+            type="text"
+            id="cardHolder"
+            name="cardholder"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+        <div class="form-group cardinput">
+          <label id="cardnumber" for="cardNumber">Card Number</label><br />
+          <input
+            class="design"
+            type="tel"
+            id="cardNumber"
+            name="cardnumber"
+            placeholder="9870 3456 7890 6473"
+            required
+          />
+        </div>
+        <div class="form-group inline-block">
+          <label id="expiry" for="expiry">Expiry</label><br />
+          <input
+            class="short-design"
+            type="tel"
+            id="expiryCard"
+            name="expiry"
+            placeholder="02/27"
+            onkeyup="formatString(event);"
+            required
+          />
+        </div>
+        <div class="form-group inline-block">
+          <label id="cvc" for="cvc">CVC</label><br />
+          <input
+            class="short-design"
+            type="tel"
+            id="cvCard"
+            name="cvc"
+            placeholder="520"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="discount-code" class="cardinput" for="discount-code">Discount Code</label
+          ><br />
+          <input
+            class="design"
+            type=""
+            id="discountCode"
+            name="discount-code"
+            placeholder="CHIKAMSO-20-OFF"
+          />
+          <button id="apply-Button" type="submit">Apply</button>
+        </div>
+        <button id="pay-butt">Pay</button>
+      </form>
+    </div>
+
+    <div class="container-display">
+      <p id="paying">You’re paying:</p>
+      <h1 id="display-headtxt">$450.00</h1>
+      <div class="products-warpper">
+        
+        <p class="products-display">Custom Gucci Shoes</p>
+        <p class="products-price">$ 400.00</p><br>
+        <span>Size: m  Color: Red</span><br>
+
+        
+        <p class="products-display">Nivea Cream  400ml</p>
+        <p class="products-price">$ 50.00</p><br>
+        <span>Size: m  Color: Blue</span><br>
+        
+
+        <p class="products-display">Discounts & Offers</p>
+        <p class="products-price">$ 0.00</p><br>
+        <hr>
+
+        <p class="products-display">Tax</p>
+        <p class="products-price">$0.00</p><br>
+
+        <p class="products-display">Total</p>
+        <p class="products-price">$450.00</p>
+      </div>
+    </div>
+    <script src="./credit-card.js"></script>
+  </body>
+</html>
